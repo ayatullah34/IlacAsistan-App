@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ilac_graph.xml"
+    app:startDestination="@id/girisEkraniFragment2">
+    <fragment
+        android:id="@+id/ilacListesiFragment"
+        android:name="com.can.ilacasistani.view.IlacListesiFragment"
+        android:label="IlacListesiFragment" >
+        <action
+            android:id="@+id/action_ilacListesiFragment_to_ilacDetayiFragment"
+            app:destination="@id/ilacDetayiFragment" />
+        <action
+            android:id="@+id/action_ilacListesiFragment_to_ozelGenelBilgiEkraniFragment"
+            app:destination="@id/ozelGenelBilgiEkraniFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ilacDetayiFragment"
+        android:name="com.can.ilacasistani.view.IlacDetayiFragment"
+        android:label="IlacDetayiFragment" >
+        <action
+            android:id="@+id/action_ilacDetayiFragment_to_ilacListesiFragment"
+            app:destination="@id/ilacListesiFragment" />
+        <argument
+            android:name="ilacId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/ozelGenelBilgiEkraniFragment2"
+        android:name="com.can.ilacasistani.view.OzelGenelBilgiEkraniFragment"
+        android:label="OzelGenelBilgiEkraniFragment" >
+        <action
+            android:id="@+id/action_ozelGenelBilgiEkraniFragment_to_ilacListesiFragment"
+            app:destination="@id/ilacListesiFragment" />
+        <action
+            android:id="@+id/action_ozelGenelBilgiEkraniFragment_to_ozelIlacListesiFragment"
+            app:destination="@id/ozelIlacListesiFragment" />
+        <action
+            android:id="@+id/action_ozelGenelBilgiEkraniFragment2_self"
+            app:destination="@id/ozelGenelBilgiEkraniFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ozelIlacListesiFragment"
+        android:name="com.can.ilacasistani.view.OzelIlacListesiFragment"
+        android:label="fragment_ozel_ilac_listesi"
+        tools:layout="@layout/fragment_ozel_ilac_listesi" >
+        <action
+            android:id="@+id/action_ozelIlacListesiFragment_to_ozelIlacEkleFragment"
+            app:destination="@id/ozelIlacEkleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ozelIlacEkleFragment"
+        android:name="com.can.ilacasistani.view.OzelIlacEkleFragment"
+        android:label="fragment_ozel_ilac_ekle"
+        tools:layout="@layout/fragment_ozel_ilac_ekle" >
+        <action
+            android:id="@+id/action_ozelIlacEkleFragment_to_ozelIlacListesiFragment"
+            app:destination="@id/ozelIlacListesiFragment" />
+        <argument
+            android:name="bilgi"
+            app:argType="string"
+            android:defaultValue="menudengeldim" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.can.ilacasistani.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_girisEkraniFragment2"
+            app:destination="@id/girisEkraniFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisEkraniFragment2"
+        android:name="com.can.ilacasistani.view.GirisEkraniFragment"
+        android:label="fragment_giris_ekrani"
+        tools:layout="@layout/fragment_giris_ekrani" >
+        <action
+            android:id="@+id/action_girisEkraniFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_girisEkraniFragment2_to_ozelGenelBilgiEkraniFragment2"
+            app:destination="@id/ozelGenelBilgiEkraniFragment2" />
+    </fragment>
+</navigation>

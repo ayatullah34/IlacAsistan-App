@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="secilenIlac"
+            type="com.can.ilacasistani.model.Ilac" />
+    </data>
+    
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.IlacDetayiFragment">
+
+    <ImageView
+        android:id="@+id/ilacImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:minHeight="200dp"
+        android:scaleType="fitCenter"
+        android:downloadImage="@{secilenIlac.ilacGorsel}"
+        app:srcCompat="@drawable/ic_launcher_background"
+        android:layout_margin="10dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/ilacIsim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilacImage"
+        android:text="@{secilenIlac.ilacIsim}"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/ilacBarkod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilacIsim"
+        android:text="@{secilenIlac.ilacBarkod}"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/ilacFiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilacBarkod"
+        android:text="@{secilenIlac.ilacFiyat}"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/ilacEtkinMadde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilacFiyat"
+        android:text="@{secilenIlac.ilacEtkinMadde}"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/ilacUygulamaSekli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilacEtkinMadde"
+        android:text="@{secilenIlac.ilacUygulamaSekli}"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp">
+
+    </TextView>
+
+
+
+
+</RelativeLayout>
+</layout>

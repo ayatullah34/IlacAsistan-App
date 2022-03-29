@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.OzelGenelBilgiEkraniFragment">
+
+    <Button
+        android:id="@+id/genel_ilac_bilgileri_btn"
+        android:layout_width="208dp"
+        android:layout_height="83dp"
+        android:text="@string/genel_ilac_bilgileri"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309">
+
+    </Button>
+
+    <Button
+        android:id="@+id/ozel_ilac_bilgiler_btn"
+        android:layout_width="208dp"
+        android:layout_height="79dp"
+        android:text="@string/ozel_ilac_bilgileri"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genel_ilac_bilgileri_btn"
+        app:layout_constraintVertical_bias="0.108">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

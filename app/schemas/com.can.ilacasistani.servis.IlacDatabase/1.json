@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e83e03f5fa3f4a731bb16516e3632fbf",
+    "entities": [
+      {
+        "tableName": "Ilac",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`isim` TEXT, `barkod` TEXT, `fiyat` TEXT, `etkinMadde` TEXT, `uygulamaSekli` TEXT, `gorsel` TEXT, `uuid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "ilacIsim",
+            "columnName": "isim",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ilacBarkod",
+            "columnName": "barkod",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ilacFiyat",
+            "columnName": "fiyat",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ilacEtkinMadde",
+            "columnName": "etkinMadde",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ilacUygulamaSekli",
+            "columnName": "uygulamaSekli",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ilacGorsel",
+            "columnName": "gorsel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "uuid",
+            "columnName": "uuid",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uuid"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e83e03f5fa3f4a731bb16516e3632fbf')"
+    ]
+  }
+}

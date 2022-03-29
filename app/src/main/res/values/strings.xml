@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IlacAsistani</string>
+    <string name="ilac_detayina_git">İlaç Detayına Git</string>
+    <string name="ilac_listesine_git">İlaç Listesine Git</string>
+    <string name="try_again">Try Again!</string>
+    <string name="todo">TODO</string>
+    <string name="ilac_ismi">İlaç İsmi</string>
+    <string name="ilac_barkodu">İlaç Barkodunu Göstereceğiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="genel_ilac_bilgileri">Genel İlaç Bilgileri</string>
+    <string name="ozel_ilac_bilgileri">Özel İlaç Bilgileri</string>
+    <string name="ilac_ekle">İlaç Ekle</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
